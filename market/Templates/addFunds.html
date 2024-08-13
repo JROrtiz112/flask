@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add funds
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <form method="POST" class="form-add" style="color:white">
+            {{ form.hidden_tag() }}
+            <br>
+            <h1>Insert the amount to add</h1>
+            <br>
+            {{ form.amount.label() }}
+            {{ form.amount(class="form-control") }}
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register an item
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <form method="POST" class="form-add" style="color:white">
+            {{ form.hidden_tag() }}
+            <br>
+            <h1>Please fill the information below</h1>
+            <br>
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Item Name") }}
+
+            {{ form.price.label() }}
+            {{ form.price(class="form-control", placeholder="Price") }}
+
+            {{ form.barcode.label() }}
+            {{ form.barcode(class="form-control", placeholder="Barcode") }}
+
+            {{ form.description.label() }}
+            {{ form.description(class="form-control", placeholder="Description") }}
+
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+{% endblock %}
